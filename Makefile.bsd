@@ -1,0 +1,11 @@
+PROG=	cpdup
+.PATH:	${.CURDIR}/src
+SRCS=	cpdup.c hcproto.c hclink.c misc.c checksum.c
+MK_DEBUG_FILES=no
+LDADD?=	-lcrypto
+PREFIX?=	/usr/local
+BINDIR?=	${PREFIX}/bin
+MANDIR?=	${PREFIX}/man/man
+
+.include <bsd.prog.mk>
+
